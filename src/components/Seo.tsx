@@ -3,10 +3,10 @@ import { useRouter } from 'next/router';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'Next.js + Tailwind CSS + TypeScript Starter',
-  siteName: 'Next.js + Tailwind CSS + TypeScript Starter',
+  title: 'Vector Motors',
+  siteName: 'Vector Motors',
   description:
-    'A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
+    '',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: 'https://tsnext-tw.thcl.dev',
   type: 'website',
@@ -15,7 +15,7 @@ const defaultMeta = {
    * No need to be filled, will be populated with openGraph function
    * If you wish to use a normal image, just specify the path below
    */
-  image: 'https://tsnext-tw.thcl.dev/images/large-og.png',
+  image: '/images/ebike_2.JPG',
 };
 
 type SeoProps = {
@@ -75,7 +75,7 @@ export default function Seo(props: SeoProps) {
           <meta
             name='author'
             property='article:author'
-            content='Theodorus Clarence'
+            content='Naufal Rafiawan Basara'
           />
         </>
       )}
@@ -97,25 +97,25 @@ const favicons: Array<React.ComponentPropsWithoutRef<'link'>> = [
   {
     rel: 'apple-touch-icon',
     sizes: '180x180',
-    href: '/favicon/apple-touch-icon.png',
+    href: '/favicon/VectorLogo.png',
   },
   {
     rel: 'icon',
     type: 'image/png',
     sizes: '32x32',
-    href: '/favicon/favicon-32x32.png',
+    href: '/favicon/VectorLogo.png',
   },
   {
     rel: 'icon',
     type: 'image/png',
     sizes: '16x16',
-    href: '/favicon/favicon-16x16.png',
+    href: '/favicon/VectorLogo.png',
   },
-  { rel: 'manifest', href: '/favicon/site.webmanifest' },
+  { rel: 'manifest', href: '/favicon/VectorLogo.png' },
   {
     rel: 'mask-icon',
-    href: '/favicon/safari-pinned-tab.svg',
+    href: '/favicon/VectorLogo.png',
     color: '#00e887',
   },
-  { rel: 'shortcut icon', href: '/favicon/favicon.ico' },
+  { rel: 'shortcut icon', href: '/favicon/VectorLogo.png' },
 ];

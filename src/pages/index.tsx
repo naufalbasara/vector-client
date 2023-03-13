@@ -6,15 +6,18 @@ import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import NextImage from '@/components/NextImage';
+import Image, { ImageProps } from 'next/image';
 
 /**
  * SVGR Support
  * Caveat: No React Props Type.
  *
  * You can override the next-env if the type is important to you
- * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
+ *
  */
-import Vercel from '~/svg/Vercel.svg';
 
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
@@ -25,47 +28,78 @@ export default function HomePage() {
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
-
-      <main>
-        <section className='bg-white'>
+      <main className='bg-gray-200'>
+        <Header/>
+        <section>
           <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-            <Vercel className='text-5xl' />
-            <h1 className='mt-4'>
-              Next.js + Tailwind CSS + TypeScript Starter
-            </h1>
-            <p className='mt-2 text-sm text-gray-800'>
-              A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
-              Import, Seo, Link component, pre-configured with Husky{' '}
-            </p>
-            <p className='mt-2 text-sm text-gray-700'>
-              <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-                See the repository
-              </ArrowLink>
-            </p>
+            <section className='mb-16 flex items-center justify-center animate-fade-in-down'>
+                <NextImage
+                  useSkeleton
+                  src='/images/products/trion_d5.JPEG'
+                  width='320'
+                  height='480'
+                  alt='Trion D5 by Vector Motors'
+                />
+                <section className='mx-10 flex flex-col justify-center animate-fade-in-down'>
+                  <h1 className='text-[48px] mb-6'>Vector Motors Indonesia</h1>
+                  <hr />
+                  <p className='text-xl'>Discover your ambitions</p>
+                </section>
+            </section>
 
-            <ButtonLink className='mt-6' href='/components' variant='light'>
-              See all components
-            </ButtonLink>
+            <section className='my-32 flex items-center justify-center animate-fade-in-down'>
+              <div className='w-56 mr-24'>
+                <p className='text-left text-s mb-4'>Vector answers the challenge of creating an optimal alternative electric vehicle.</p>
+                <hr />
+                <p className='text-left text-s'> We started by creating a prototype in product development through designs, samples or models with the aim of testing the concept or work process of the product.</p>
+              </div>
+              <div className='grid grid-cols-2 gap-1'>
+                <NextImage
+                    useSkeleton
+                    src='/images/products/phantom_v1/phantom_v1_indoor.PNG'
+                    width='240'
+                    height='320'
+                    alt='Phantom V1 by Vector Motors'
+                />
+                <NextImage
+                    useSkeleton
+                    src='/images/products/phantom_v1/phantom_v1_indoor2.PNG'
+                    width='240'
+                    height='320'
+                    alt='Phantom V1 by Vector Motors'
+                  />
+              </div>
+            </section>
 
-            <UnstyledLink
-              href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
-              className='mt-4'
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                width='92'
-                height='32'
-                src='https://vercel.com/button'
-                alt='Deploy with Vercel'
-              />
-            </UnstyledLink>
-
-            <footer className='absolute bottom-2 text-gray-700'>
-              © {new Date().getFullYear()} By{' '}
-              <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-                Theodorus Clarence
-              </UnderlineLink>
-            </footer>
+            <section className='my-32'>
+              <div className='grid grid-cols-3 gap-1'>
+              <NextImage
+                          useSkeleton
+                          src='/images/products/eATV/eATV_outdoor3.JPG'
+                          className='object-cover'
+                          width='240'
+                          height='320'
+                          alt='eATV by Vector Motors'
+                        />
+                <NextImage
+                        useSkeleton
+                        src='/images/products/phantom_v1/phantom_v1_indoor3.JPG'
+                        width='240'
+                        height='320'
+                        alt='Phantom V1 by Vector Motors'
+                      />
+                <NextImage
+                        useSkeleton
+                        src='/images/products/phantom_h5/phantom_h5_outdoor.JPG'
+                        width='240'
+                        height='320'
+                        alt='Phantom H5 by Vector Motors'
+                      />
+              </div>
+            </section>
+            
+            
+            <Footer/>
           </div>
         </section>
       </main>
