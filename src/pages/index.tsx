@@ -145,20 +145,20 @@ export default function HomePage() {
                       <div className="bg-white px-4 py-5 sm:p-6">
                         <div className="grid grid-cols-6 gap-6">
                           <div className="col-span-6 sm:col-span-12">
-                            <label for="name" className="block text-left text-sm font-medium leading-6 text-gray-900">First name</label>
-                            <input name="name" id="name" autocomplete="name" className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                            <label htmlFor="name" className="block text-left text-sm font-medium leading-6 text-gray-900">First name</label>
+                            <input name="name" id="name" className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
                           </div>
                           <div className="col-span-6 sm:col-span-12">
-                            <label for="email-address" className="block text-left text-sm font-medium leading-6 text-gray-900">Email address</label>
-                            <input name="email-address" id="email-address" autocomplete="email" className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                            <label htmlFor="email-address" className="block text-left text-sm font-medium leading-6 text-gray-900">Email address</label>
+                            <input name="email-address" id="email-address" className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
                           </div>
                           <div className="col-span-6 sm:col-span-12">
-                            <label for="subject" className="block text-left text-sm font-medium leading-6 text-gray-900">Subject</label>
-                            <input name="subject" id="subject" autocomplete="subject" className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                            <label htmlFor="subject" className="block text-left text-sm font-medium leading-6 text-gray-900">Subject</label>
+                            <input name="subject" id="subject" className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
                           </div>
                           <div className="col-span-6 sm:col-span-12">
-                            <label for="message" className="block text-left text-sm font-medium leading-6 text-gray-900">Message</label>
-                            <input name="message" id="message" autocomplete="message" className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                            <label htmlFor="message" className="block text-left text-sm font-medium leading-6 text-gray-900">Message</label>
+                            <input name="message" id="message" className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
                           </div>
                         </div>
                       </div>
