@@ -11,7 +11,7 @@ import Footer from '@/components/layout/Footer';
 import NextImage from '@/components/NextImage';
 import Image, { ImageProps } from 'next/image';
 import styles from '../styles/Home.module.css';
-import img from 'public/images/products/eATV/Iconic_Z5_2.png';
+import img from "../../public/images/products/eATV/Iconic_Z5_2.png";
 
 export default function HomePage() {
   return (
@@ -20,7 +20,7 @@ export default function HomePage() {
       <Header/>
       <div
         style={{
-          backgroundImage: `url(/images/products/eATV/Iconic_Z5_2.png)`,
+          backgroundImage: `url(${img.src})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
@@ -31,7 +31,6 @@ export default function HomePage() {
           display: 'flex',
           alignItems: 'end',
           justifyContent: 'center',
-
         }}
       >                  
                   <div className='flex my-14 mr-[-950px]'>
