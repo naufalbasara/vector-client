@@ -10,14 +10,30 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import NextImage from '@/components/NextImage';
 import Image, { ImageProps } from 'next/image';
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
+import img from 'public/images/products/eATV/Iconic_Z5_2.png';
 
 export default function HomePage() {
   return (
     <Layout>
       <Seo />
       <Header/>
-      <div className={`${styles.jumbotron} mt-0 pt-0 max-w-screen h-screen text-center flex items-end justify-center`}>                  
+      <div
+        style={{
+          backgroundImage: `url(/images/products/eATV/Iconic_Z5_2.png)`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'scroll',
+          marginTop: '0',
+          paddingTop: '0',
+          height: '100vh',
+          display: 'flex',
+          alignItems: 'end',
+          justifyContent: 'center',
+
+        }}
+      >                  
                   <div className='flex my-14 mr-[-950px]'>
                     <ButtonLink href='https://tokopedia.link/bGviZR6r9xb' className='bg-black border-red-400 hover:text-red-600 hover:bg-gray-400 transition mx-2'>
                       Order Now
