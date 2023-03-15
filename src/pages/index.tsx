@@ -16,7 +16,14 @@ export default function HomePage() {
     <Layout>
       <Seo />
       <Header/>
-      <div className="mt-0 pt-0 max-w-screen h-screen bg-[url('/images/products/eATV/iconic_Z5_2.png')] bg-cover bg-no-repeat bg-center text-center flex items-end justify-center">
+      <div className="mt-0 pt-0 max-w-screen h-screen text-center flex items-end justify-center">                  
+                  <Image
+                              src='/images/products/eATV/iconic_Z5_2.png'
+                              alt=''
+                              className='z-[-1]'
+                              layout='fill'
+                              objectFit='cover'
+                  />
                   <div className='flex my-14 mr-[-950px]'>
                     <ButtonLink href='https://tokopedia.link/bGviZR6r9xb' className='bg-black border-red-400 hover:text-red-600 hover:bg-gray-400 transition mx-2'>
                       Order Now
@@ -58,9 +65,10 @@ export default function HomePage() {
                         width='1080'
                         height='320'
                         alt='Phantom H5 by Vector Motors'
-                />
+              />
             </section>
             <div className="mt-24 max-w-screen w-screen h-screen bg-[url('/images/products/Phantom.PNG')] bg-scroll bg-cover bg-no-repeat bg-center">
+                
             </div>
 
             <section className='my-32 flex items-center justify-center animate-fade-in-down'>
