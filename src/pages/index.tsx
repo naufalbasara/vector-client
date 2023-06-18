@@ -2,7 +2,7 @@ import * as React from 'react';
 import Layout from '@/components/layout/Layout';
 import ButtonLink from '@/components/links/ButtonLink';
 import Seo from '@/components/Seo';
-import Header from '@/components/layout/Header';
+import ResponsiveHeader from '@/components/layout/ResponsiveHeader';
 import Footer from '@/components/layout/Footer';
 import NextImage from '@/components/NextImage';
 
@@ -10,10 +10,10 @@ export default function HomePage() {
   return (
     <Layout>
       <Seo />
-      <Header/>
+      <ResponsiveHeader/>
       <div
       className='bg-vector_home bg-no-repeat bg-cover bg-center bg-scroll flex items-end justify-center h-screen'>                  
-                  <div className='flex my-14 mr-[-950px]'>
+                  <div className='flex my-14 lg:mr-[-950px] mr-0'>
                     <ButtonLink href='https://tokopedia.link/bGviZR6r9xb' className='bg-black border-red-400 hover:text-red-600 hover:bg-gray-400 transition mx-2'>
                       Order Now
                     </ButtonLink>
