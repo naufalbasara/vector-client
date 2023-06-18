@@ -6,6 +6,9 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'vector_home': "url('../../public/images/products/eATV/Iconic_Z5_2.png')",
+      },
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
       },

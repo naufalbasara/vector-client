@@ -1,17 +1,10 @@
 import * as React from 'react';
-
 import Layout from '@/components/layout/Layout';
-import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import NextImage from '@/components/NextImage';
-import Image, { ImageProps } from 'next/image';
-import styles from '../styles/Home.module.css';
-import img from "../../public/images/products/eATV/Iconic_Z5_2.png";
 
 export default function HomePage() {
   return (
@@ -19,20 +12,7 @@ export default function HomePage() {
       <Seo />
       <Header/>
       <div
-        style={{
-          backgroundImage: `url(${img.src})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'scroll',
-          marginTop: '0',
-          paddingTop: '0',
-          height: '100vh',
-          display: 'flex',
-          alignItems: 'end',
-          justifyContent: 'center',
-        }}
-      >                  
+      className='bg-vector_home bg-no-repeat bg-cover bg-center bg-scroll flex items-end justify-center h-screen'>                  
                   <div className='flex my-14 mr-[-950px]'>
                     <ButtonLink href='https://tokopedia.link/bGviZR6r9xb' className='bg-black border-red-400 hover:text-red-600 hover:bg-gray-400 transition mx-2'>
                       Order Now
@@ -61,9 +41,9 @@ export default function HomePage() {
                 </section> */}
             </section>
             
-            <section className='mb-24'>
-            <h1 className='text-center mb-6'>Vector Electric ATV <span className='text-red-600'>ICONIC Z5</span></h1>
-            <iframe width="840" height="480" src="https://www.youtube.com/embed/VHbHDIvEVSk"></iframe>
+            <section className='mb-24 w-full flex flex-col justify-content-center align-items-center'>
+            <h1 className=' mb-6'>Vector Electric ATV <span className='text-red-600'>ICONIC Z5</span></h1>
+            <iframe className='m-auto w-4/5 aspect-video' src="https://www.youtube.com/embed/VHbHDIvEVSk"></iframe>
             </section>
 
             <section>
@@ -87,7 +67,6 @@ export default function HomePage() {
 
             <section className='my-32 flex items-center justify-center animate-fade-in-down'>
               <div className='w-56 mr-24'>
-              
                 <h1 className='text-left mb-4'>Prototype</h1>
                 <p className='text-left text-s mb-4'>Vector answers the challenge of creating an optimal alternative electric vehicle.</p>
                 <hr />
@@ -97,6 +76,7 @@ export default function HomePage() {
                 <NextImage
                     useSkeleton
                     src='/images/products/phantom_v1/phantom_v1_indoor.PNG'
+                    className='object-fill mx-auto w-full h-auto'
                     width='240'
                     height='320'
                     alt='Phantom V1 by Vector Motors'
@@ -104,6 +84,7 @@ export default function HomePage() {
                 <NextImage
                     useSkeleton
                     src='/images/products/phantom_v1/phantom_v1_indoor2.PNG'
+                    className='object-fill mx-auto w-full h-full'
                     width='240'
                     height='320'
                     alt='Phantom V1 by Vector Motors'
@@ -112,11 +93,11 @@ export default function HomePage() {
             </section>
 
             <section className='my-32'>
-              <div className='max-w-screen grid grid-cols-3 gap-1'>
+              <div className='md:max-w-screen grid grid-cols-3 gap-1'>
               <NextImage
                           useSkeleton
                           src='/images/products/eATV/iconic_outdoor.JPG'
-                          className='object-cover mx-auto'
+                          className='object-fill mx-auto w-9/12 h-auto'
                           width='240'
                           height='320'
                           alt='eATV by Vector Motors'
@@ -124,7 +105,7 @@ export default function HomePage() {
                 <NextImage
                         useSkeleton
                         src='/images/products/phantom_v1/phantom_v1_indoor3.JPG'
-                        className='object-cover mx-auto'
+                        className='object-fill mx-auto w-9/12 h-auto'
                         width='240'
                         height='320'
                         alt='Phantom V1 by Vector Motors'
@@ -132,7 +113,7 @@ export default function HomePage() {
                 <NextImage
                         useSkeleton
                         src='/images/products/phantom_h5/phantom_h5_outdoor.JPG'
-                        className='object-cover mx-auto'
+                        className='object-fill mx-auto w-9/12 h-auto'
                         width='240'
                         height='320'
                         alt='Phantom H5 by Vector Motors'
@@ -145,7 +126,7 @@ export default function HomePage() {
               <div className="section-title">
                 <h1 className='text-left mb-4'>Find Us</h1>
               </div>
-            <div className="mapouter"><div className="gmap_canvas"><iframe width="1080" height="270" id="gmap_canvas" src="https://maps.google.com/maps?q=Vector+Motors+Indonesia&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe></div></div>
+            <div className="mapouter"><div className="gmap_canvas"><iframe className='m-auto w-full aspect-video' id="gmap_canvas" src="https://maps.google.com/maps?q=Vector+Motors+Indonesia&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe></div></div>
             <div className="container" data-aos="fade-up">
               <div className="row mt-5">
                 <div className="col-lg-8 mt-5 mt-lg-0">
