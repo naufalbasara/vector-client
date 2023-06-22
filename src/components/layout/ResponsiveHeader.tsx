@@ -1,11 +1,11 @@
-import React from "react";
 import {
   Navbar,
-  MobileNav,
+  Collapse,
   Typography,
   IconButton,
 } from "@material-tailwind/react";
 import UnstyledLink from '@/components/links/UnstyledLink';
+import React from "react";
  
 export default function Example() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -46,8 +46,8 @@ export default function Example() {
  
   return (
     <>
-      <Navbar className="fixed inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 !bg-transparent border-none">
-        <div className="flex items-center justify-between text-red-400 bg-transparent">
+      <Navbar className="fixed z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4 bg-transparent border-none">
+        <div className="flex items-center justify-between text-red-400">
           <UnstyledLink href='/' className='text-2xl font-bold hover:text-red-500 transition'>
             V E C T O R
           </UnstyledLink>
@@ -92,9 +92,9 @@ export default function Example() {
             </IconButton>
           </div>
         </div>
-        <MobileNav open={openNav}>
+        <Collapse open={openNav}>
           {navList}
-        </MobileNav>
+        </Collapse>
       </Navbar>
     </>
   );
