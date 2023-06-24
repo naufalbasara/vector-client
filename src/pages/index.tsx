@@ -7,6 +7,9 @@ import ButtonLink from '@/components/links/ButtonLink';
 import * as React from 'react';
 
 export default function HomePage() {
+  const [subject, setSubject] = React.useState('');
+  const [message, setMessage] = React.useState('');
+
   return (
     <Layout>
       <Seo />
@@ -163,7 +166,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className='mt-5 md:col-span-2 md:mt-0'>
-                    <form action='#' method='POST'>
+                    <form>
                       <div className='overflow-hidden shadow sm:rounded-md'>
                         <div className='bg-white px-4 py-5 sm:p-6'>
                           <div className='grid grid-cols-6 gap-6'>
@@ -201,6 +204,9 @@ export default function HomePage() {
                                 Subject
                               </label>
                               <input
+                                onChange={(event) => {
+                                  setSubject(event.target.value);
+                                }}
                                 name='subject'
                                 id='subject'
                                 className='mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
@@ -214,6 +220,9 @@ export default function HomePage() {
                                 Message
                               </label>
                               <input
+                                onChange={(event) => {
+                                  setMessage(event.target.value);
+                                }}
                                 name='message'
                                 id='message'
                                 className='mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
@@ -222,12 +231,13 @@ export default function HomePage() {
                           </div>
                         </div>
                         <div className='bg-gray-50 px-4 py-3 text-right sm:px-6'>
-                          <button
-                            type='submit'
+                          <a
+                            // type='submit'
+                            href={`mailto:vectormotorsindonesia@gmail.com?subject=${subject}&body=${message}`}
                             className='inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500'
                           >
                             Submit
-                          </button>
+                          </a>
                         </div>
                       </div>
                     </form>
