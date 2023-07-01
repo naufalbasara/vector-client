@@ -14,7 +14,7 @@ export default function HomePage() {
     <Layout>
       <Seo />
       <ResponsiveHeader />
-      <div className='bg-vector_home bg-no-repeat bg-cover bg-center bg-scroll flex items-end justify-center h-screen'>
+      <div className='bg-vector_home bg-no-repeat bg-cover bg-center bg-scroll flex items-end justify-center h-96 md:h-screen'>
         <div className='flex my-14 lg:mr-[-700px] xl:mr-[-800px] 2xl:mr-[-950px] mr-0'>
           <ButtonLink
             href='https://tokopedia.link/bGviZR6r9xb'
@@ -65,18 +65,17 @@ export default function HomePage() {
             </section>
 
             <section className='my-32 md:flex items-center justify-center animate-fade-in-down'>
-              <div className='md:w-56 md:mr-24'>
+              <div className='md:w-56 md:mr-24 mb-8'>
                 <h1 className='md:text-center md:text-left mb-4'>Prototype</h1>
-                <p className='md:text-center md:text-left sm:text-base text-sm mb-4'>
+                <p className='md:text-center md:text-left sm:text-base text-sm mb-4 font-bold'>
                   Vector answers the challenge of creating an optimal
                   alternative electric vehicle.
                 </p>
                 <hr />
-                <p className='md:text-center md:text-left sm:text-base text-sm'>
-                  {' '}
-                  We started by creating a prototype in product development
+                <p className='md:text-center md:text-left sm:text-base text-sm italic'>
+                  " We started by creating a prototype in product development
                   through designs, samples or models with the aim of testing the
-                  concept or work process of the product.
+                  concept or work process of the product. "
                 </p>
               </div>
               <div className='sm:my-6 grid grid-cols-2 gap-2 mx-2 sm:gap-10 sm:mx-10'>
