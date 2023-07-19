@@ -1,8 +1,6 @@
 import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
-import Footer from '@/components/layout/Footer';
 import Layout from '@/components/layout/Layout';
-import ResponsiveHeader from '@/components/layout/ResponsiveHeader';
 import ButtonLink from '@/components/links/ButtonLink';
 import * as React from 'react';
 
@@ -13,7 +11,6 @@ export default function HomePage() {
   return (
     <Layout>
       <Seo />
-      <ResponsiveHeader />
       <div className='bg-vector_home bg-no-repeat bg-cover bg-center bg-scroll flex items-end justify-center h-96 md:h-screen'>
         <div className='flex my-14 lg:mr-[-700px] xl:mr-[-800px] 2xl:mr-[-950px] mr-0'>
           <ButtonLink
@@ -31,7 +28,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <main className='bg-gray-200'>
+      
         <section>
           <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
             <section className='mb-24 w-full flex flex-col justify-content-center align-items-center'>
@@ -244,10 +241,8 @@ export default function HomePage() {
                 </div>
               </div>
             </section>
-            <Footer />
           </div>
         </section>
-      </main>
     </Layout>
   );
 }

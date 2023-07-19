@@ -3,7 +3,7 @@ import * as React from 'react';
 
 export default function Footer() {
   return (
-    <footer className='absolute bottom-2 text-gray-700'>
+    <footer className='bottom-2 text-gray-700 text-center p-4'>
       © {new Date().getFullYear()} By{' '}
       <UnderlineLink href='https://vectormotors.id'>
         Vector Motors Indonesia

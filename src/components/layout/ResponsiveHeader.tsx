@@ -12,10 +12,10 @@ export default function Example() {
 
   const links = [
     { href: '/', label: 'Home' },
-    { href: '/', label: 'Products' },
-    { href: '/', label: 'About' },
-    { href: '/', label: 'Contact' },
-    { href: '/', label: 'Store' },
+    { href: '/product', label: 'Products' },
+    { href: '/about', label: 'About' },
+    // { href: '/', label: 'Contact' },
+    // { href: '/', label: 'Store' },
   ];
 
   React.useEffect(() => {
@@ -35,7 +35,7 @@ export default function Example() {
           color='blue-gray'
           className='p-1 font-normal'
         >
-          <a href={link.href} className='flex items-center text-red-400'>
+          <a href={link.href} className='flex items-center text-red-400 hover:text-red-800'>
             {link.label}
           </a>
         </Typography>
@@ -49,7 +49,7 @@ export default function Example() {
         <div className='flex items-center justify-between text-red-400'>
           <UnstyledLink
             href='/'
-            className='text-2xl font-bold hover:text-red-500 transition'
+            className='text-2xl font-bold hover:text-red-800 transition'
           >
             V E C T O R
           </UnstyledLink>
