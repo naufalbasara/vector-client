@@ -1,38 +1,59 @@
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
-import UnstyledLink from '@/components/links/UnstyledLink';
+import { InferGetStaticPropsType } from 'next';
+import { Poppins } from '@next/font/google';
+import About from '@/pages/about';
+// const poppins = Poppins({
+//   subsets:['latin'],
+//   weight:['100', '200', '300', '400', '500', '600', '700'],
+// })
 
-const SinglePage = () => {
-  return (
-    <>
-      <Layout>
-        <Seo templateTitle='Coming Soon' />
-        <main className='min-h-screen flex justify-center items-center text-red-600'>
-        <h1>Coming Soon...</h1>
-        <section className='my-4 flex items-center text-3xl'>
-          <UnstyledLink
-            href='https://github.com/naufalbasara'
-            className='mr-6 hover:text-[#A0A0A0] active:text-[#2A412A]'
-          >
-            <i className='devicon-github-original'></i>
-          </UnstyledLink>
-          <UnstyledLink
-            href='https://linkedin.com/in/naufalrafiawan'
-            className='mr-6 hover:text-[#A0A0A0] active:text-[#2A412A]'
-          >
-            <i className='devicon-linkedin-plain'></i>
-          </UnstyledLink>
-          <UnstyledLink
-            href='https://twitter.com/naufalbasara'
-            className='mr-6 hover:text-[#A0A0A0] active:text-[#2A412A]'
-          >
-            <i className='devicon-twitter-original'></i>
-          </UnstyledLink>
-        </section>
-      </main>
-      </Layout>
-    </>
-  );
-};
+// const SinglePage = ({
+//   source,
+//   frontMatter,
+// }: InferGetStaticPropsType<typeof getStaticProps>) => {
+//   return (
+//     <>
+//       <Layout>
+//         <Seo templateTitle='' />
+//         <main>
+//           <p>s</p>
+//         </main>
+//       </Layout>
+//     </>
+//   );
+// };
 
-export default SinglePage;
+// export async function getStaticPaths() {
+//   const data:any = fetch('api/products').then((response:any) => {
+//     response.json().then((response:any)=> {
+//       return [...response]
+//     })
+//   });
+
+//   data.then((response:any) => {
+//     response.json().then((response:any) => {
+//       console.log(response)
+//     })
+//   })
+
+//   return {
+//     paths: data?.map((obj:any) => ({
+//       params: {
+//         slug: obj.slug,
+//       },
+//     })),
+//     fallback: false,
+//   };
+// };
+
+// export const getStaticProps = async ({ params }: Params) => {
+//   let data:any = await fetch('api/products').then((response:any) => {
+//     response.json().then((response:any)=> {
+//       return [...response]
+//     })
+//   });
+  
+// };
+
+export default About;

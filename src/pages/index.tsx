@@ -49,15 +49,15 @@ export default function HomePage() {
                 className='max-w-screen'
                 width='1080'
                 height='320'
-                alt='Phantom H5 by Vector Motors'
+                alt='ICONIC Z5 by Vector Motors'
               />
               <NextImage
                 useSkeleton
-                src='/images/products/Phantom.png'
+                src='/images/products/phantom_v1/Phantom_V1_bg.png'
                 className='max-w-screen mt-24'
                 width='1080'
                 height='320'
-                alt='Phantom H5 by Vector Motors'
+                alt='Phantom V1 by Vector Motors'
               />
             </section>
 

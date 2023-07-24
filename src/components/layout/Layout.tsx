@@ -4,11 +4,11 @@ import Footer from '@/components/layout/Footer';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   // Put Header or Footer Here
-  return <>
+  return <main className='bg-gray-200 mt-0'>
     <ResponsiveHeader />
-    <main className='bg-gray-200'>
+    <div>
       {children}
-      <Footer />
-    </main>
-  </>;
+    </div>
+    <Footer />
+  </main>;
 }

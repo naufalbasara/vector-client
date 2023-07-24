@@ -1,42 +1,43 @@
-import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
 import Layout from '@/components/layout/Layout';
-import ArrowLink from '@/components/links/ArrowLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
 import * as React from 'react';
+import ProductCard from '@/components/ProductCard';
 
 export default function Product() {
+  const [products, setProducts] = React.useState([{id: null, name:'', category:'', description:'', image_path: ''}])
+  const dataFetchedRef = React.useRef(false);
+
+  React.useEffect(() => {
+    if (dataFetchedRef.current) return;
+    dataFetchedRef.current = true;
+    try {
+      fetch('api/products').then((response:any) => {
+        response.json().then((response:any)=> {
+          const data = [...response]
+          setProducts(data);
+        })
+      })
+    } catch {
+      console.log('failed to fetch');
+    }
+  }, [])
+
   return (
     <Layout>
       <Seo templateTitle='Product' />
-      <main className='min-h-screen flex flex-col justify-center items-center text-red-600 text-center'>
-        <h1>Coming Soon...</h1>
-        <section className='my-4 flex flex-col items-center sm:text-lg text-base'>
-          <ArrowLink
-            href='https://instagram.com/vectormotors.id'
-            as={UnstyledLink}
-            className='sm:mb-0 mb-4 inline-flex items-center hover:text-[#A0A0A0]'
-          >
-            check our instagram
-          </ArrowLink>
-          <div className='sm:my-4 grid grid-cols-2 gap-2 mx-2 sm:gap-10 sm:mx-10'>
-            <NextImage
-              useSkeleton
-              src='/images/products/phantom_v1/phantom_v1_indoor.PNG'
-              className='object-fill mx-auto w-full h-auto'
-              width='240'
-              height='320'
-              alt='Phantom V1 by Vector Motors'
+      <main className='min-h-screen pt-32 flex flex-col justify-center items-center w-screen'>
+        <h1 className='underline decoration-red-500 decoration-4'>Let's see our products</h1>
+        <section className='sm:grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 my-8'>
+          {products?.map((obj):any => (
+            <ProductCard
+              key={obj.id}
+              name={obj.name}
+              category={obj.category}
+              description={obj.description}
+              image_path={obj.image_path}
+              href='#'
             />
-            <NextImage
-              useSkeleton
-              src='/images/products/phantom_v1/phantom_v1_indoor2.PNG'
-              className='object-fill mx-auto w-full h-full'
-              width='240'
-              height='320'
-              alt='Phantom V1 by Vector Motors'
-            />
-          </div>
+            ))}
         </section>
       </main>
     </Layout>
