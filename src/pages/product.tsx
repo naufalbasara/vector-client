@@ -31,6 +31,12 @@ export default function Product() {
       <main className='min-h-screen pt-32 flex flex-col justify-center items-center w-screen'>
         <h1 className='underline decoration-red-500 decoration-4'>Let's see our products</h1>
         <section className='sm:grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 my-8'>
+          {isLoading && 
+          <div>
+            <h3>loading...</h3>
+            <p> while waiting, check our <a href='https://instagram.com/vectormotors.id' target='_blank' className='text-blue-800'>instagram</a></p>
+          </div>
+          }
           {!isLoading && products?.map((obj):any => (
           <ProductCard
             key={obj.id}
