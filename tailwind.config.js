@@ -9,6 +9,7 @@ module.exports = withMT({
     extend: {
       backgroundImage: {
         'vector_home': "url('../../public/images/products/eATV/Iconic_Z5_2.png')",
+        'vector_about': "url('../../public/images/products/About.png')",
       },
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],

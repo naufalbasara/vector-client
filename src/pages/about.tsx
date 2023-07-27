@@ -1,44 +1,56 @@
 import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
 import Layout from '@/components/layout/Layout';
-import ArrowLink from '@/components/links/ArrowLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
 import * as React from 'react';
 
 export default function About() {
   return (
     <Layout>
       <Seo templateTitle='About' />
-      <main className='min-h-screen flex flex-col justify-center items-center text-red-600 text-center'>
-        <h1>Coming Soon...</h1>
-        <section className='my-4 flex flex-col items-center sm:text-lg text-base'>
-          <ArrowLink
-            href='https://instagram.com/vectormotors.id'
-            as={UnstyledLink}
-            className='sm:mb-0 mb-4 inline-flex items-center hover:text-[#A0A0A0]'
-          >
-            check our instagram
-          </ArrowLink>
-          <div className='sm:my-4 grid grid-cols-2 gap-2 mx-2 sm:gap-10 sm:mx-10'>
+      <div className='bg-vector_about bg-no-repeat py-20 bg-cover bg-center bg-scroll flex flex-col items-center justify-evenly min-h-screen md:h-screen text-white'>
+      <div className='sm:mt-4  grid grid-cols-4 gap-2 mx-2 sm:gap-10 sm:mx-10 pb-6'>
             <NextImage
               useSkeleton
-              src='/images/products/phantom_v1/phantom_v1_indoor.PNG'
-              className='object-fill mx-auto w-full h-auto'
+              src='/images/products/charity-event.png'
+              className='object-fill mx-auto w-full'
               width='240'
               height='320'
               alt='Phantom V1 by Vector Motors'
             />
             <NextImage
               useSkeleton
-              src='/images/products/phantom_v1/phantom_v1_indoor2.PNG'
-              className='object-fill mx-auto w-full h-full'
+              src='/images/products/vector-itb.png'
+              className='object-fill mx-auto w-full'
               width='240'
               height='320'
               alt='Phantom V1 by Vector Motors'
             />
+            <NextImage
+              useSkeleton
+              src='/images/products/alpha-r1-outdoor.png'
+              className='object-fill mx-auto w-full'
+              width='240'
+              height='320'
+              alt='Phantom V1 by Vector Motors'
+            />
+            <NextImage
+              useSkeleton
+              src='/images/products/phantom-h5-outdoor.png'
+              className='object-fill mx-auto w-full'
+              width='240'
+              height='320'
+              alt='Phantom V1 by Vector Motors'
+            />
+      </div>
+
+        <section className=''>
+          <h1 className='text-red-500 font-bold text-center mb-4'>Company Overview</h1>
+          <div className='grid grid-cols-2 gap-4'>
+            <p className='ml-10 text-justify text-[10px] sm:text-xs md:text-xs lg:text-base'>Vector Motors merupakan usaha yang utamanya bergerak di bidang kendaraan listrik dan penyimpanan energi. Sejak awal terbentuk, kami telah menciptakan berbagai kendaraan listrik alternatif dalam skala kecil dengan tipe uji prototype, serta mengembangkan energy storage system sebagai tahap awal distrupsi kami dalam bentuk adaptasi transisi. Hal ini muncul berdasarkan kesadaran terhadap kondisi permasalahan isu lingkungan dan teknologi secara global.</p>
+            <p className='mr-10 text-justify text-[10px] sm:text-xs md:text-xs lg:text-base'>Dengan visi "Menciptakan peluang dengan memberdayakan mobilitas masa depan melalui kendaraan listrik yang menarik di bumi" dan misi "Melakukan distrupsi skala mobilitas kendaraan dengan mengubah cara orang bergerak di masa depan melalui kendaraan listrik yang memberikan pengalaman berkendara secara revolusioner dan mengesankan." Vector Motors berkomitmen untuk menghadirkan solusi mobilitas inovatif yang memanfaatkan kendaraan listrik sebagai sarana untuk menciptakan peluang baru bagi mobilitas masa depan. Tagline "Rise Beyond Limits" mencerminkan semangat kami untuk terus berinovasi, melampaui batas, dan menghadapi tantangan dengan tekad kuat.</p>
           </div>
         </section>
-      </main>
+      </div>
     </Layout>
   );
 }
