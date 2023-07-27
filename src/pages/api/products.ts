@@ -15,8 +15,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     {id:8, slug: "phantom-h5", name:"PHANTOM H5", category: "eBike", description:"Lorem ipsum dolor amet", image_path:'/images/products/eATV/eATV_outdoor.JPG'},
     {id:9, slug: "nemesis-a5", name:"NEMESIS A5", category: "Electric Smart Balance", description:"Lorem ipsum dolor amet", image_path:'/images/products/eATV/eATV_outdoor.JPG'},
   ]
-
-  res.status(200).json(data_product);
-  req;
+  if (req.method === 'GET') {
+    res.status(200).json(data_product);
+  }
 
 }

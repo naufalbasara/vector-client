@@ -5,7 +5,7 @@ import ProductCard from '@/components/ProductCard';
 import UnderlineLink from '@/components/links/UnderlineLink';
 
 export default function Product() {
-  const [products, setProducts] = React.useState([{id: null, name:'', category:'', description:'', image_path: ''}])
+  const [products, setProducts] = React.useState([{id: null,slug:'', name:'', category:'', description:'', image_path: ''}])
   const dataFetchedRef = React.useRef(false);
   const [isLoading, setLoading] = React.useState(false)
 
@@ -46,7 +46,7 @@ export default function Product() {
             category={obj.category}
             description={obj.description}
             image_path={obj.image_path}
-            href='#'
+            href={'/product/' + obj.slug}
           />
           ))}
         </section>
