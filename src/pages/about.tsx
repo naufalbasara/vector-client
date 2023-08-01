@@ -35,7 +35,7 @@ export default function About() {
             />
             <NextImage
               useSkeleton
-              src='/images/products/phantom-h5-outdoor.png'
+              src='/images/products/PHANTOM_H5/phantom_h5_outdoor.JPG'
               className='object-fill mx-auto w-full'
               width='240'
               height='320'

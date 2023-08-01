@@ -99,7 +99,7 @@ export default function HomePage() {
               <div className='md:max-w-screen grid grid-cols-3 gap-1'>
                 <NextImage
                   useSkeleton
-                  src='/images/products/eATV/iconic_outdoor.JPG'
+                  src='/images/products/ICONIC_Z5/iconic_outdoor.JPG'
                   className='object-fill mx-auto w-9/12 h-auto'
                   width='240'
                   height='320'

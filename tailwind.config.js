@@ -4,12 +4,12 @@ const withMT = require("@material-tailwind/react/utils/withMT");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = withMT({
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}',"./node_modules/flowbite/**/*.js"],
   theme: {
     extend: {
       backgroundImage: {
-        'vector_home': "url('../../public/images/products/eATV/Iconic_Z5_2.png')",
-        'vector_about': "url('../../public/images/products/About.png')",
+        'vector_home': "url('../../public/images/products/ICONIC_Z5/Iconic_Z5_2.png')",
+        'vector_about': "url('../../public/images/About.png')",
       },
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
@@ -77,5 +77,8 @@ module.exports = withMT({
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('flowbite/plugin')
+],
 });

@@ -1,16 +1,8 @@
 .jumbotron {
-  background: url('/images/products/eATV/Iconic_Z5_2.png');
+  background: url('/images/products/ICONIC_Z5/Iconic_Z5_2.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
   z-index: -1;
-}
-
-.bg-img-phantom {
-  background: url('/images/products/Phantom.PNG');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: scroll;
 }
