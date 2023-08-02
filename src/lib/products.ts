@@ -82,7 +82,7 @@ export async function getProductDetails(slug:any) {
 
 
 export async function getAllProducts() {
-  const datas:any = [
+  const datas:Object[] = [
     {id:1, slug: "vespa-conversion"},
     {id:6, slug: "raptor-e3"},
     {id:10, slug: "takara",},

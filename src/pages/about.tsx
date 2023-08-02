@@ -11,7 +11,7 @@ export default function About() {
       <div className='sm:mt-4  grid grid-cols-4 gap-2 mx-2 sm:gap-10 sm:mx-10 pb-6'>
             <NextImage
               useSkeleton
-              src='/images/products/charity-event.png'
+              src='/images/charity-event.png'
               className='object-fill mx-auto w-full'
               width='240'
               height='320'
@@ -19,7 +19,7 @@ export default function About() {
             />
             <NextImage
               useSkeleton
-              src='/images/products/vector-itb.png'
+              src='/images/vector-itb.png'
               className='object-fill mx-auto w-full'
               width='240'
               height='320'
@@ -27,7 +27,7 @@ export default function About() {
             />
             <NextImage
               useSkeleton
-              src='/images/products/alpha-r1-outdoor.png'
+              src='/images/products/ALPHA_R1/alpha-r1-outdoor.png'
               className='object-fill mx-auto w-full'
               width='240'
               height='320'

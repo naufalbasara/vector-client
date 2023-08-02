@@ -1,3 +1,5 @@
+const { default: next } = require("next/types");
+
 module.exports = {
   env: {
     browser: true,
@@ -12,6 +14,7 @@ module.exports = {
     'prettier',
   ],
   rules: {
+    'extends': "next",
     'no-unused-vars': 'off',
     'no-console': 'warn',
     '@typescript-eslint/explicit-module-boundary-types': 'off',

@@ -8,16 +8,18 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
 // import required modules
-import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper';
 
-type SwiperProps = {
-  images: string[];
+type Props = {
+  images?: string[];
 };
 
-export default function SwiperComponent({ images }: SwiperProps) {
+
+const SwComponent: React.FC<Props> = ({ images }) => {
   return (
-    <>
+    <div>
     <Swiper
+      modules={[Autoplay, EffectCoverflow, Pagination]}
       effect={'coverflow'}
       grabCursor={true}
       centeredSlides={true}
@@ -34,15 +36,16 @@ export default function SwiperComponent({ images }: SwiperProps) {
         slideShadows: false,
       }}
       pagination={true}
-      modules={[Autoplay, EffectCoverflow, Pagination]}
       className="mySwiper"
     >
-      {images && images.map((image) => (
-        <SwiperSlide className='bg-center bg-cover w-full h-full mx-auto'>
-          <img src={image} className='bg-center bg-cover w-50 h-full mx-auto'/>
+      {images && images.map((image, index) => (
+        <SwiperSlide className='' key={index}>
+          <img src={image} className='bg-center bg-cover w-96 h-96 mx-auto'/>
         </SwiperSlide>
       ))}
     </Swiper>
-  </>
+  </div>
   );
 }
+
+export default SwComponent;

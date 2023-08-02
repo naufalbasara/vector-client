@@ -45,8 +45,9 @@ export default function HomePage() {
             <section>
               <NextImage
                 useSkeleton
-                src='/images/products/vector_flyer.jpg'
+                src='/images/vector_flyer.jpg'
                 className='max-w-screen'
+                imgClassName='max-w-screen'
                 width='1080'
                 height='320'
                 alt='ICONIC Z5 by Vector Motors'
@@ -55,6 +56,7 @@ export default function HomePage() {
                 useSkeleton
                 src='/images/products/phantom_v1/Phantom_V1_bg.png'
                 className='max-w-screen mt-24'
+                imgClassName='max-w-screen'
                 width='1080'
                 height='320'
                 alt='Phantom V1 by Vector Motors'
