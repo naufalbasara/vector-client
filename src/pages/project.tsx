@@ -14,7 +14,8 @@ export default function Project() {
           <h1 className='m-2'>Smart KWh Meter Project</h1>
           <div className='m-4 w-full flex justify-center items-center h-20 bg-gray-400'>
             <input type='text' value={text}></input>
-            <Button className='bg-[#f00] mx-6' onClick={() => {SetText('')}}>Delete</Button>
+            <Button className='bg-red-500 hover:bg-red-800 mx-6' onClick={() => {SetText('')}}>Delete</Button>
+            <Button className='bg-[#2CA87F] hover:bg-gray-500' onClick={() => {alert("Token Submitted")}}>Submit</Button>
           </div>
           
           <div className='container grid grid-cols-3 w-max'>
