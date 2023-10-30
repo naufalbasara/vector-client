@@ -28,13 +28,6 @@ export default function Project() {
       <Seo templateTitle='Smart KWh Meter Project' />
       <main className='min-h-screen pt-32 flex flex-col items-center text-center'>
           <h1 className='m-2'>Smart KWh Meter Project</h1>
-          <div className='m-4 w-full flex justify-center items-center'>
-            {
-              powerState ? (
-                <Button className='bg-[#2CA87F] hover:bg-gray-500 rounded-full p-10' onClick={submitState}>On</Button>
-              ) : (<Button className='bg-red-500 hover:bg-red-800 mx-6 rounded-full p-10' onClick={submitState}>Off</Button>)
-            }
-          </div>
           <div className='m-4 w-full flex justify-center items-center h-20 bg-gray-400'>
             <input type='text' onChange={() => SetText(text)} value={text}></input>
             <Button className='bg-red-500 hover:bg-red-800 mx-6' onClick={() => {SetText('')}}>Delete</Button>
