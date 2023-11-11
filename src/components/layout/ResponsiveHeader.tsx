@@ -14,8 +14,7 @@ export default function Example() {
     { href: '/', label: 'Home' },
     { href: '/product', label: 'Products' },
     { href: '/about', label: 'About' },
-    // { href: '/', label: 'Contact' },
-    // { href: '/', label: 'Store' },
+    { href: '/project', label: 'Smart kWh Meter' },
   ];
 
   React.useEffect(() => {
