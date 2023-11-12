@@ -1,11 +1,33 @@
 import Image from "next/image";
 import UnstyledLink from "@/components/links/UnstyledLink";
 import UnderlineLink from "@/components/links/UnderlineLink";
-// import { useFormState, useFormStatus } from 'react-dom';
-// import { authenticate } from '@/lib/actions';
+import React, {useState} from "react";
+import axios from "axios";
+import { setToken } from "@/lib/token";
+import { useRouter } from "next/router";
 
 export default function Login() {
-  // const [code, action] = useFormState(authenticate, undefined);
+  const [formData, setFormData] = useState({"email": "", "password":""});
+
+  const handleOnEmailChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({...formData, "email":e.target.value})
+  }
+
+  const handleOnPasswordChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({...formData, "password":e.target.value})
+  }
+
+  const router = useRouter();
+
+  const handleSubmit = (e:any) => {
+    e.preventDefault();
+
+    axios.post('http://localhost:8000/api/auth/sign-in', formData).then((res) => {
+      setToken(res.data.token);
+      router.push('/');
+    }).catch((error) => {console.log(error)})
+
+  }
 
   return (
     <div className="flex flex-col items-center md:flex-row md:h-screen">
@@ -23,7 +45,7 @@ export default function Login() {
               Please sign in to your account.
             </p>
           </div>
-          <form className="mt-8 space-y-6">
+          <form onSubmit={handleSubmit} className="mt-8 space-y-6">
             <div>
               <label htmlFor="email" className="block font-bold text-gray-700">
                 Email address
@@ -34,6 +56,7 @@ export default function Login() {
                 placeholder="Enter your email"
                 className="w-full px-4 py-3 mt-1 border-gray-300 rounded-md focus:border-indigo-500 focus:ring focus:ring-indigo-200"
                 required
+                onChange={handleOnEmailChange}
               />
             </div>
             <div>
@@ -49,19 +72,13 @@ export default function Login() {
                 placeholder="Enter your password"
                 className="w-full px-4 py-3 mt-1 border-gray-300 rounded-md focus:border-indigo-500 focus:ring focus:ring-indigo-200"
                 required
+                onChange={handleOnPasswordChange}
               />
             </div>
             <div>
               <LoginButton/>
             </div>
-            {/* {code === 'CredentialSignin' && (
-            <>
-              <div className="h-5 w-5 text-red-500" />
-              <p aria-live="polite" className="text-sm text-red-500">
-                Invalid credentials
-              </p>
-            </>
-            )} */}
+
             <p>don't have any account? <UnderlineLink
             href='/register'
             className='font-bold'
@@ -78,7 +95,6 @@ function LoginButton() {
  
   return (
     <button
-    disabled
     type="submit"
     // aria-disabled={pending}
     className="w-full px-4 py-3 font-bold text-white bg-indigo-500 rounded-md hover:bg-indigo-600 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700"
