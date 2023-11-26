@@ -22,7 +22,7 @@ export default function Login() {
   const handleSubmit = (e:any) => {
     e.preventDefault();
 
-    axios.post('http://localhost:8000/api/auth/sign-in', formData).then((res) => {
+    axios.post('http://62.72.56.253:8000/api/auth/sign-in', formData).then((res) => {
       setToken(res.data.token);
       router.push('/');
     }).catch((error) => {console.log(error)})

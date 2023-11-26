@@ -18,7 +18,7 @@ export default function Register() {
   const handleSubmit = (e:any) => {
     e.preventDefault();
 
-    axios.post('http://localhost:8000/api/auth/register/user', formData).then((res) => {
+    axios.post('http://62.72.56.253:8000/api/auth/register/user', formData).then((res) => {
       router.push('/');
     }).catch((error) => {console.log(error)})
 

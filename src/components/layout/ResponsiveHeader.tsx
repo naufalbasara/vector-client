@@ -1,4 +1,6 @@
 import UnstyledLink from '@/components/links/UnstyledLink';
+import { NextRequest } from 'next/server';
+
 import {
   Collapse,
   IconButton,
@@ -7,7 +9,7 @@ import {
 } from '@material-tailwind/react';
 import React from 'react';
 
-export default function Example() {
+export default function ResponsiveHeader() {
   const [openNav, setOpenNav] = React.useState(false);
 
   const links = [
@@ -98,3 +100,14 @@ export default function Example() {
     </>
   );
 }
+
+// export async function getServerSideProps(req:NextRequest) {
+//   const token = req.cookies.get('vector/token')?.value
+//   console.log(req.cookies);
+
+//   if (!token) {
+//     return false
+//   }
+
+//   return true
+// }
