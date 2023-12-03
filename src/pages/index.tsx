@@ -4,7 +4,7 @@ import Layout from '@/components/layout/Layout';
 import ButtonLink from '@/components/links/ButtonLink';
 import * as React from 'react';
 
-export default function HomePage() {
+export default function HomePage({userData}:any) {
   const [subject, setSubject] = React.useState('');
   const [message, setMessage] = React.useState('');
 

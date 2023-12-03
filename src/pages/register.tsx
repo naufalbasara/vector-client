@@ -18,11 +18,13 @@ export default function Register() {
   const handleSubmit = (e:any) => {
     e.preventDefault();
 
-    axios.post('http://62.72.56.253:8000/api/auth/register/user', formData).then((res) => {
+    axios.post('https://vector-server.tech/api/auth/register/user', formData).then((res) => {
       router.push('/');
     }).catch((error) => {console.log(error)})
 
   }
+
+  
 
   return (
     <div className="flex flex-col items-center md:flex-row md:h-screen">
